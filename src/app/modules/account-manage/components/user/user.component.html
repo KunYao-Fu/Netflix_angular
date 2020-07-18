@@ -1,0 +1,8 @@
+<div class="User">
+    <div class="User__Photo" (click)="this.reply()">
+        <span *ngIf="this.isEdit">
+            <i  class="fa fa-pencil" aria-hidden="true"></i>
+        </span>
+    </div>
+    <p>{{this.user.name}}</p>
+</div>

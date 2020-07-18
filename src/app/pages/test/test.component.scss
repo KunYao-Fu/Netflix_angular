@@ -1,0 +1,11 @@
+@import 'mixin';
+.Test {
+    padding-top: 280px;
+    color: white;
+    height: 100vh;
+    & > div {
+        div {
+            @include border(red);
+        }
+    }
+}

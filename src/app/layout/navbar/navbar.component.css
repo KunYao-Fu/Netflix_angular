@@ -1,0 +1,28 @@
+.Nav__Logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 90px;
+  width: 100%;
+}
+.Nav__Logo > img {
+  height: 126px;
+  width: 224px;
+  margin-left: 35px;
+}
+.Nav__Logo > p {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+  width: 65px;
+  background-color: #e50914;
+  border-radius: 3px;
+  margin-right: 60px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.Nav__Logo > p :hover {
+  cursor: pointer;
+}

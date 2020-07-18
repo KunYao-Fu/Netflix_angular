@@ -1,0 +1,50 @@
+.User {
+    &__Photo {
+        width: 150px;
+        height: 150px;
+        background-color: blue;
+        cursor: pointer;
+    }
+    & > p {
+        padding-top: 15px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        color: rgb(128, 128, 128);
+        cursor: pointer;
+    }
+    &:hover {
+        & > div {
+            border: white 1px solid;
+            margin: -1px;
+        }
+        & > p {
+            color: white;
+        }
+    }
+    &__Photo {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        position: relative;
+        & > span {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            height: 150px;
+            width: 150px;
+            background-color: rgba($color: #000000, $alpha: 0.3);
+            & > i {
+                border-radius: 100%;
+                border: white 1px solid;
+                font-size: 1.5rem;
+                padding: 10px;
+            }
+        }
+    }
+}

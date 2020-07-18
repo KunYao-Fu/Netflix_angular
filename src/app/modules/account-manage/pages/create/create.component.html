@@ -1,0 +1,16 @@
+<div class="Create">
+    <div class="Create__Container">
+        <p>新增使用者</p>
+        <p>為共享此帳戶的人新增使用者。</p>
+        <div>
+            <span></span>
+            <input type="text" [(ngModel)]="this.UserName" placeholder="名字">
+            <input id="ageLimit" type="checkbox">
+            <label for="ageLimit">兒童?</label>
+        </div>
+        <span>
+            <button (click)="this.submit()">繼續</button>
+            <button (click)="this.cancel()">取消</button>
+        </span>
+    </div>
+</div>

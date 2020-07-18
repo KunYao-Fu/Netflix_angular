@@ -1,0 +1,16 @@
+.Main {
+    height: 100%;
+    &__Container {
+        padding: 0px 4rem;
+        display: flex;
+        flex-direction: column;
+    }
+    &__Billboard {
+        height: 55rem;
+        border-bottom: 1px solid white;
+        margin: 0px -4rem;
+        background-image: url("../../../assets/img/main_billboard.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}

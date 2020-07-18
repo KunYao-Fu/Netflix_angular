@@ -1,0 +1,35 @@
+<div class="Account-Manage">
+    <div class="Account-Manage__Container">
+        <ng-container [ngSwitch]="this.status">
+            <ng-container *ngSwitchCase='"normal"'>
+                <p>誰在觀賞影片?</p>
+                <ul>
+                    <li *ngFor="let user of this.$user.users;let i = index">
+                        <app-user [user]="user" (click)="this.router.navigate(['main'])"></app-user>
+                    </li>
+                    <li *ngIf="this.$user.users.length < 5">
+                        <i class="fa fa-plus-circle" (click)="this.createUser()"></i>
+                        <p>新增使用者</p>
+                    </li>
+                </ul>
+                <button (click)="this.status='edit'">管理使用者</button>
+            </ng-container>
+            <ng-container *ngSwitchCase='"edit"'>
+                <div class="Account-Manage__Edit">
+                    <p>管理使用者</p>
+                    <ul>
+                        <li *ngFor="let user of this.$user.users;let i = index">
+                            <app-user [user]="user" [isEdit]="this.status==='edit'" (emit)="this.manageUser($event)">
+                            </app-user>
+                        </li>
+                        <li *ngIf="this.$user.users.length < 5">
+                            <i class="fa fa-plus-circle" (click)="this.router.navigate(['account-manage/create'])"></i>
+                            <p>新增使用者</p>
+                        </li>
+                    </ul>
+                    <button (click)="this.status='normal'">完成</button>
+                </div>
+            </ng-container>
+        </ng-container>
+    </div>
+</div>

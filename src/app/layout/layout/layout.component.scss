@@ -1,0 +1,37 @@
+@import '../../../styles/variable';
+
+.Layout {
+    
+    &__Container {
+        // width: 100vw;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-top: -16px;
+        // height: 100vh;
+        background-color: black;
+        // padding: 0 47px;
+        color: white;
+    }
+
+    &__Page {
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: $break-point-m) and (min-width: $break-point-s) {
+    .Layout {
+        &__Container {
+            // height: 850px;
+        }
+    }
+}
+
+@media screen and (max-width: $break-point-s) {
+    .Layout {
+        &__Container {
+            // height: 850px;
+            padding: 16px;
+        }
+    }
+}

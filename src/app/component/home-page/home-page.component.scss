@@ -1,0 +1,279 @@
+p{
+    margin: 0px;
+    color: white;;
+}
+.Background {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("../../../assets/img/background_home.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 965px;
+    border-bottom: #222 8px solid;
+    margin: 0px -47px;
+    &__Logo {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 90px;
+        width: 100%;
+        &__Netflix {
+            height: 126px;
+            width: 224px;
+            margin-left: 35px;
+        }
+        &__Login {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            height: 35px;
+            width: 65px;
+            background-color: rgb(229, 9, 20);
+            border-radius: 3px;
+            margin-right: 60px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        &__Login:hover {
+            cursor: pointer;
+        }
+    }
+    &__Title {
+        font-size: 60px;
+        width: 640px;
+        text-align: center;
+        font-weight: bolder;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-top: 150px;
+    }
+    &__Subtitle {
+        font-size: 25px;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 10px 0px;
+    }
+    &__Enterbar {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 10px 0px;
+        &__Mail {
+            height: 70px;
+            width: 500px;
+            font-size: 15px;
+        }
+        &__Access {
+            height: 76px;
+            width: 200px;
+            background-color: red;
+            font-size: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+            font-weight: bold;
+            border: 0px;
+        }
+        &__Access:hover {
+            cursor: pointer;
+        }
+    }
+    &__Subtitle2 {
+        font-size: 18px;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+}
+.Tv {
+    height: 470px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-bottom: rgb(34, 34, 34) 8px solid;
+    &__Textbox {
+        width: 550px;
+        &__Title2 {
+            font-size: 50px;
+            font-weight: bolder;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        &__Subtitle3 {
+            font-size: 25px;;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    }
+    &__Animate {
+        height: 400px;
+        width: 530px;
+        border: 1px solid white;
+        margin: 0px 40px;
+    }
+}
+.Download {
+    height: 470px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-bottom: rgb(34, 34, 34) 8px solid;
+    &__Phone {
+        height: 380px;
+        width: 500px;
+        border: 1px solid white;
+        margin: 0px 40px;
+    }
+    &__Textbox {
+        width: 550px;
+        &__Title2 {
+            font-size: 50px;
+            font-weight: bolder;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        &__Subtitle3 {
+            font-size: 25px;;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    }
+}
+.Mobile {
+    height: 470px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-bottom: rgb(34, 34, 34) 8px solid;
+    &__Textbox {
+        width: 550px;
+        &__Title2 {
+            font-size: 50px;
+            font-weight: bolder;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        &__Subtitle3 {
+            font-size: 25px;;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    }
+    &__Animate {
+        height: 400px;
+        width: 530px;
+        border: 1px solid white;
+        margin: 0px 40px;
+    }
+}
+.QA {
+    height: 850px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: rgb(34, 34, 34) 8px solid;
+    &__Title2 {
+        font-size: 50px;
+        font-weight: bolder;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    &__List {
+        color: white;
+        list-style: none;
+        font-size: 25px;;
+        font-family: Arial, Helvetica, sans-serif;  
+    }
+    &__List > li {
+        background-color: rgb(48, 48, 48);
+        height: 75px;
+        width: 790px;
+        margin-bottom:8px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding-left: 35px;
+    }
+    &__List:hover {
+        cursor: pointer;
+    }
+    &__Enterbar {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 10px 0px;
+        &__Mail {
+            height: 70px;
+            width: 500px;
+            font-size: 15px;
+        }
+        &__Access {
+            height: 76px;
+            width: 200px;
+            background-color: red;
+            font-size: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+            font-weight: bold;
+            border: 0px;
+        }
+        &__Access:hover {
+            cursor: pointer;
+        }
+    }
+    &__Subtitle2 {
+        font-size: 18px;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+}
+.Bottom {
+    height: 470px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 30%;
+    color: rgb(117, 117, 117);
+    &__Text1 {
+        margin-bottom: 20px;
+        cursor: pointer;
+    }
+    &__Text1:hover {
+        text-decoration: underline;
+    }
+    &__Text2 {
+        display: flex;
+        flex-direction: row;
+    }
+    &__Text2 > ul > li {
+        list-style: none;
+        font-size: 13px;
+        margin-bottom: 18px;
+        font-family: Arial, Helvetica, sans-serif;
+        cursor: pointer;
+    }
+    &__Text2 > ul > li:hover {
+        text-decoration: underline;
+    }
+    &__Text2 > ul {
+        padding: 0px;
+        margin-right: 150px;
+    }
+    &__Textbox2 {
+        height: 50px;
+        width: 130px;
+        border: 1px solid rgb(51, 51, 51);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        cursor: default;
+    }
+    &__Text3 {
+        font-size: 13px;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-top: 25px;
+    }
+}
+.Bottom > p {
+    color: rgb(117, 117, 117);
+}
+.Bottom > span > p {
+    color: rgb(153, 153, 153);
+}

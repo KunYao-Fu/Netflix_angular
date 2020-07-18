@@ -1,0 +1,278 @@
+p {
+  margin: 0px;
+  color: white;
+}
+.Background {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("../../../assets/img/background_home.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 965px;
+  border-bottom: #222 8px solid;
+}
+.Background__Logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 90px;
+  width: 100%;
+}
+.Background__Logo__Netflix {
+  height: 126px;
+  width: 224px;
+  margin-left: 35px;
+}
+.Background__Logo__Login {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+  width: 65px;
+  background-color: #e50914;
+  border-radius: 3px;
+  margin-right: 60px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.Background__Logo__Login:hover {
+  cursor: pointer;
+}
+.Background__Title {
+  font-size: 60px;
+  width: 640px;
+  text-align: center;
+  font-weight: bolder;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 150px;
+}
+.Background__Subtitle {
+  font-size: 25px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 10px 0px;
+}
+.Background__Enterbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 10px 0px;
+}
+.Background__Enterbar__Mail {
+  height: 70px;
+  width: 500px;
+  font-size: 15px;
+}
+.Background__Enterbar__Access {
+  height: 76px;
+  width: 200px;
+  background-color: red;
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  font-weight: bold;
+  border: 0px;
+}
+.Background__Enterbar__Access:hover {
+  cursor: pointer;
+}
+.Background__Subtitle2 {
+  font-size: 18px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.Tv {
+  height: 470px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-bottom: #222 8px solid;
+}
+.Tv__Textbox {
+  width: 550px;
+}
+.Tv__Textbox__Title2 {
+  font-size: 50px;
+  font-weight: bolder;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.Tv__Textbox__Subtitle3 {
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.Tv__Animate {
+  height: 400px;
+  width: 530px;
+  border: 1px solid white;
+  margin: 0px 40px;
+}
+.Download {
+  height: 470px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-bottom: #222 8px solid;
+}
+.Download__Phone {
+  height: 380px;
+  width: 500px;
+  border: 1px solid white;
+  margin: 0px 40px;
+}
+.Download__Textbox {
+  width: 550px;
+}
+.Download__Textbox__Title2 {
+  font-size: 50px;
+  font-weight: bolder;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.Download__Textbox__Subtitle3 {
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.Mobile {
+  height: 470px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-bottom: #222 8px solid;
+}
+.Mobile__Textbox {
+  width: 550px;
+}
+.Mobile__Textbox__Title2 {
+  font-size: 50px;
+  font-weight: bolder;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.Mobile__Textbox__Subtitle3 {
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.Mobile__Animate {
+  height: 400px;
+  width: 530px;
+  border: 1px solid white;
+  margin: 0px 40px;
+}
+.QA {
+  height: 850px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: #222 8px solid;
+}
+.QA__Title2 {
+  font-size: 50px;
+  font-weight: bolder;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.QA__List {
+  color: white;
+  list-style: none;
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.QA__List > li {
+  background-color: #303030;
+  height: 75px;
+  width: 790px;
+  margin-bottom: 8px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 35px;
+}
+.QA__List:hover {
+  cursor: pointer;
+}
+.QA__Enterbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 10px 0px;
+}
+.QA__Enterbar__Mail {
+  height: 70px;
+  width: 500px;
+  font-size: 15px;
+}
+.QA__Enterbar__Access {
+  height: 76px;
+  width: 200px;
+  background-color: red;
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  font-weight: bold;
+  border: 0px;
+}
+.QA__Enterbar__Access:hover {
+  cursor: pointer;
+}
+.QA__Subtitle2 {
+  font-size: 18px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.Bottom {
+  height: 470px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 30%;
+  color: #757575;
+}
+.Bottom__Text1 {
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.Bottom__Text1:hover {
+  text-decoration: underline;
+}
+.Bottom__Text2 {
+  display: flex;
+  flex-direction: row;
+}
+.Bottom__Text2 > ul > li {
+  list-style: none;
+  font-size: 13px;
+  margin-bottom: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+}
+.Bottom__Text2 > ul > li:hover {
+  text-decoration: underline;
+}
+.Bottom__Text2 > ul {
+  padding: 0px;
+  margin-right: 150px;
+}
+.Bottom__Textbox2 {
+  height: 50px;
+  width: 130px;
+  border: 1px solid #333;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  cursor: default;
+}
+.Bottom__Text3 {
+  font-size: 13px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 25px;
+}
+.Bottom > p {
+  color: #757575;
+}
+.Bottom > span > p {
+  color: #999;
+}

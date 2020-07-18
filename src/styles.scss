@@ -1,1 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
+@import './styles/style';
+
+body{
+    margin: 0px;
+    
+}
+p{
+    margin: 0px;
+    color: white;;
+}
+/* Importing Bootstrap SCSS file. */

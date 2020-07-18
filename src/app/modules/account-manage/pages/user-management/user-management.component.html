@@ -1,0 +1,42 @@
+<div class="UserManagement">
+    <div class="UserManagement__Container">
+        <p>編輯使用者</p>
+        <div>
+            <span>
+                <i class="fa fa-pencil" aria-hidden="true"></i>
+            </span>
+            <div>
+                <div>
+                    <input type="text" placeholder="名字" (ngModelChange)='this.$user.modifyUser("name", $event)'
+                        [(ngModel)]='this.name'>
+                    <p>語言</p>
+                    <div>
+                        <app-dropdown [options]="this.Mock" [default]="this.$user.getUserById(this.$user.currentId).lan" (emitter)="this.lanModify($event)"></app-dropdown>
+                    </div>
+                </div>
+                <div>
+                    <p>年齡分級設定：</p>
+                    <p>所有年齡分級</p>
+                    <p>顯示<b>所有年齡分級</b>的影片給這位使用者觀賞。</p>
+                    <button>編輯</button>
+                </div>
+                <div>
+                    <p>自動播放控制項</p>
+                    <span>
+                        <input type="checkbox" id="autoNext" checked= true >
+                        <label for="autoNext">在所有裝置自動播放影集的下一集。</label>
+                    </span>
+                    <span>
+                        <input type="checkbox" id="autoTrailer" >
+                        <label for="autoTrailer">在使用所有裝置瀏覽時自動播放預告。</label>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div>
+            <button (click)="this.router.navigate(['account-manage'])">儲存</button>
+            <button [routerLink]='["../"]'>取消</button>
+            <button (click)="this.onDelete()">刪除使用者</button>
+        </div>
+    </div>
+</div>

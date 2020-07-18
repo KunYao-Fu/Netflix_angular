@@ -1,0 +1,13 @@
+<div class="Dropdown">
+    <div class="Dropdown__Container">
+        <button (click)="this.status=!this.status">
+            {{this.default}}<i class="fa fa-sort-down"></i>
+        </button>
+        <div *ngIf="this.status">
+            <ul>
+                <li *ngFor="let lan of this.options;let i = index" (click)="this.customize(lan)">{{lan}}</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
