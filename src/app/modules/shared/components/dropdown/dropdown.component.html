@@ -1,9 +1,9 @@
-<div class="Dropdown">
+<div #tdropdown class="Dropdown">
     <div class="Dropdown__Container">
-        <button (click)="this.status=!this.status">
+        <button (click)="this.expand()">
             {{this.default}}<i class="fa fa-sort-down"></i>
         </button>
-        <div *ngIf="this.status">
+        <div *ngIf="this.isExpand">
             <ul>
                 <li *ngFor="let lan of this.options;let i = index" (click)="this.customize(lan)">{{lan}}</li>
             </ul>

@@ -1,0 +1,34 @@
+<div class="Login">
+    <div class="Login__Content">
+        <div>
+            <img src="../../../../../assets/img/Logo_Netflix.png" alt="" (click)="this.router.navigate(['guest/index'])">
+        </div>
+        <div>
+            <p>登入</p>
+            <div>
+                <input type="text" placeholder="電郵或電話號碼" [(ngModel)]="this.account">
+                <input type="text" placeholder="密碼" [(ngModel)]="this.password">
+                <button>登入</button>
+            </div>
+            <div>
+                <div>
+                    <label>
+                        <input type="checkbox">
+                        <p>記住我</p>
+                    </label>
+                    <p>需要協助?</p>
+                </div>
+                <div>
+                    <i class="fa fa-google"></i>
+                    <p>以 Google 登入</p>
+                </div>
+                <div>
+                    <p>尚未加入 Netflix?<a (click)="this.submit()">馬上註冊</a>。</p> 
+                </div>
+                <p>此頁面受到 Google reCAPTCHA 保護，以確認您不是機器人。 <a *ngIf="this.test == false" (click)="this.test = true">進一步了解。</a></p>
+                <br>
+                <p *ngIf="this.test == true">由 Google reCAPTCHA 收集的資訊受《<a>隱私權聲明</a>》與《<a>服務條款</a>》約束，用來提供、維持並提升 reCAPTCHA 服務，並且維繫一般安全（Google 不會用於個人化廣告）。</p>
+            </div>
+        </div>
+        <span></span>
+</div>

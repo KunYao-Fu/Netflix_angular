@@ -20,7 +20,7 @@ export class UserManagementComponent implements OnInit {
   public test1 = <HTMLInputElement>document.getElementById('autoNext');
 
   ngOnInit(): void {
-
+    
   }
 
   public Mock = ['中文', 'English', '日本語']

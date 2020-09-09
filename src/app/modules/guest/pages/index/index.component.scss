@@ -1,0 +1,336 @@
+.Index {
+    &__Board {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-image: url("../../../../../assets/img/Board_Guest.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 50rem;
+        & > div:first-child {
+            z-index: 2;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 95%;
+            & > img {
+                width: 12.5rem;
+                height: 7.5rem;
+            }
+            & > button {
+                border: none;
+                outline: none;
+                color: white;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                height: 2.5rem;
+                width: 4rem;
+                background-color: rgb(229, 9, 20);
+                border-radius: 3px;
+                font-size: 1rem;
+                font-family: Arial, Helvetica, sans-serif;
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+        & > p:nth-child(2) {
+            z-index: 2;
+            font-size: 4rem;
+            width: 50rem;
+            word-wrap: break-word;
+            text-align: center;
+            font-weight: bolder;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-top: 8.5rem;
+            line-height: 4.5rem;
+        }
+        & > p:nth-child(3) {
+            z-index: 2;
+            font-size: 1.5rem;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0.5rem 0px;
+        }
+        & > p:nth-child(4) {
+            z-index: 2;
+            margin: 0.5rem 0px;
+            font-size: 1.3rem;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        & > div:nth-child(5) {
+            z-index: 2;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin: 10px 0px;
+            & > input {
+                height: 70px;
+                width: 500px;
+                font-size: 15px;
+                outline: 0px;
+                border-radius: 2px;
+                border: 1px solid black;
+                padding-left: 0.5rem;
+            }
+            & > button {
+                height: 70px;
+                width: 200px;
+                background-color: red;
+                font-size: 30px;
+                font-family: Arial, Helvetica, sans-serif;
+                color: white;
+                font-weight: bold;
+                border: 1px solid black;
+                outline: 0px;
+                border-radius: 2px;
+                & > i {
+                    margin-left: 0.7rem;
+                }
+            }
+            & > button:hover {
+                cursor: pointer;
+            }
+        }
+        & > span {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+    }
+    &__Tv {
+        height: 30rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        border-top: #222 8px solid;
+        border-bottom: rgb(34, 34, 34) 8px solid;
+        & > div:first-child {
+            width: 550px;
+            & > p:first-child {
+                font-size: 3rem;
+                font-weight: bolder;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            & > p:last-child {
+                font-size: 1.5rem;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+        }
+        & > div:last-child {
+            position: relative;
+            & > img {
+                width: 33rem;
+                z-index: 2;
+                max-width: 100%;
+                position: relative;
+            }
+            & > div {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                max-width: 73%;
+                max-height: 54%;
+                top: 21%;
+                left: 13%;
+                & > video {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+    &__Download {
+        height: 30rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        border-bottom: rgb(34, 34, 34) 8px solid;
+        & > div:first-child {
+            width: 32rem;
+            position: relative;
+            & > img {
+                width: 100%;
+            }
+            & > div {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                width: 57%;
+                height: 6rem;
+                position: absolute;
+                border: 2px solid rgba(255, 255, 255, 0.25);
+                border-radius: 0.75rem;
+                background-color: black;
+                bottom: 1.3rem;
+                left: 21%;
+                & > img {
+                    height: 80%;
+                    padding: 0px 1rem;
+                }
+                & > div {
+                    width: 55%;
+                    font-family: Arial, Helvetica, sans-serif;
+                    & > p:first-child {
+                        font-size: 1rem;
+                        font-weight: bold;
+                    }
+                    & > p:last-child {
+                        font-size: 0.9rem;
+                        color: rgb(0, 113, 235);
+                    }
+                }
+            }
+        }
+        & > div:last-child {
+            width: 35rem;
+            & > p:first-child {
+                font-size: 3rem;
+                font-weight: bolder;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            & > p:last-child {
+                font-size: 1.5rem;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+        }
+    }
+    &__Mobile {
+        height: 30rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        border-bottom: rgb(34, 34, 34) 8px solid;
+        & > div:first-child {
+            width: 35rem;
+            & > p:first-child {
+                font-size: 3rem;
+                font-weight: bolder;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            & > p:last-child {
+                font-size: 1.5rem;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+        }
+        & > div:last-child {
+            width: 33rem;
+            position: relative;
+            & > img {
+                width: 100%;
+                z-index: 2;
+                position: relative;
+            }
+            & > div {
+                height: 100%;
+                width: 100%;
+                max-width: 63%;
+                max-height: 47%;
+                top: 11%;
+                left: 18%;
+                position: absolute;
+                & > video {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+    &__QA {
+        height: max-content;
+        padding: 5rem 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-bottom: rgb(34, 34, 34) 8px solid;
+        & > p:first-child {
+            font-size: 3rem;
+            font-weight: bolder;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-bottom: 2rem;
+        }
+        & > ul {
+            color: white;
+            list-style: none;
+            font-size: 1.6rem;
+            line-height: 2rem;
+            font-family: Arial, Helvetica, sans-serif;
+            & > li {
+                background-color: rgb(48, 48, 48);
+                height: 4.7rem;
+                width: 50rem;
+                margin-top: 0.5rem;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                padding-left: 2.2rem;
+                justify-content: space-between;
+                & > i {
+                    margin-right: 2rem;
+                }
+            }
+            & > p {
+                background-color: rgb(48, 48, 48);
+                height: max-content;
+                width: 50rem;
+                margin-top: 0.1rem;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                padding: 2.2rem;
+            }
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        & > p:nth-child(3) {
+            font-size: 1.1rem;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 2rem 0px 1rem 0px;
+        }
+        & > div {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            & > input {
+                height: 70px;
+                width: 500px;
+                font-size: 15px;
+                outline: 0px;
+                border-radius: 2px;
+                border: 1px solid black;
+                padding-left: 0.5rem;
+            }
+            & > button {
+                height: 70px;
+                width: 200px;
+                background-color: red;
+                font-size: 30px;
+                font-family: Arial, Helvetica, sans-serif;
+                color: white;
+                font-weight: bold;
+                border: 1px solid black;
+                outline: 0px;
+                border-radius: 2px;
+                & > i {
+                    margin-left: 0.7rem;
+                }
+            }
+        }
+        
+    }
+}

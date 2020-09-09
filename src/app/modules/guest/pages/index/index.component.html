@@ -1,0 +1,85 @@
+<div class="Index">
+    <div class="Index__Board">
+        <div>
+            <img src="../../../../../assets/img/Logo_Netflix.png" alt="">
+            <!-- 缺一個dropdown -->
+            <button (click)="this.login()">登入</button>
+        </div>
+        <p>不限時數的電影與節目，還有更多精彩內容。</p> 
+        <p>隨處都能觀賞，可隨時取消。</p>
+        <p>準備開心觀賞了嗎？請輸入您的電郵，以建立或存取您的帳戶。</p>
+        <div>
+            <input type="text" placeholder="電郵地址">
+            <button>開始使用<i class="fa fa-angle-right"></i></button>
+        </div>
+        <span></span>
+    </div>
+    <div class="Index__Tv">
+        <div>
+            <p>在電視上觀賞。</p>
+            <p>在智慧型電視、Playstation、Xbox、Chromecast、Apple TV、藍光播放器等多種裝置上觀賞。</p>
+        </div>
+        <div>
+            <img src="../../../../../assets/img/Tv.png" alt="">
+            <div>
+                <video src="../../../../../assets/video/Tv_video.m4v" autoplay muted loop></video>
+            </div>
+        </div>
+    </div>
+    <div class="Index__Download">
+        <div>
+            <img src="../../../../../assets/img/Phone.jpg" alt="">
+            <div>
+                <img src="../../../../../assets/img/Phone_boxshot.jpg" alt="">
+                <div>
+                    <p>怪奇物語</p>
+                    <p>下載中......</p>
+                </div>
+                <i class="fa fa-download"></i>
+            </div>
+        </div>
+        <div>
+            <p>下載您想看的節目，在外行動觀賞。</p>
+            <p>幫您省下流量，離線觀賞您最喜歡的所有影片。</p>
+        </div>
+    </div>
+    <div class="Index__Mobile">
+        <div>
+            <p>隨處都能觀賞。</p>
+            <p>隨您在手機、平板電腦、筆記型電腦和電視上串流不限時數的電影與節目，無額外費用。</p>
+        </div>
+        <div>
+            <img src="../../../../../assets/img/Mobile.png" alt="">
+            <div>
+                <video src="../../../../../assets/video/Mobile_video.m4v" autoplay muted loop></video>
+            </div>
+        </div>
+    </div>
+    <div class="Index__QA">
+        <p>常見問題解答</p>
+        <ul [ngSwitch]="this.dropdownStatus">
+            <li (click)='this.openDropdown("open1")' >Netflix是什麼?<i class="fa fa-plus" [ngStyle]="{'transform':this.dropdownStatus==='open1'? 'rotate(45deg)': 'rotate(0deg)'}"></i></li>
+            <p *ngSwitchCase="'open1'">Netflix 是串流服務，透過數千種可連結網路的行動裝置，提供各種獲獎肯定的節目、電影、動畫、紀錄片等精彩內容。
+                <br>
+                <br>
+                只要支付一筆經濟實惠的月費，就能隨時隨地，盡情觀賞，毫無廣告。時時都有新的內容供您探索，而且每星期都會加入新的節目與電影！</p>
+            <li (click)='this.openDropdown("open2")'>Netflix如何計費?<i class="fa fa-plus" [ngStyle]="{'transform':this.dropdownStatus==='open2'? 'rotate(45deg)': 'rotate(0deg)'}"></i></li>
+            <p *ngSwitchCase="'open2'">只要支付一筆固定月費，就能用您的智慧型手機、平板電腦、智慧型電視、筆記型電腦或串流裝置觀賞 Netflix。各種方案介於每月 $270 至 $390。無額外費用，不須綁約。</p>
+            <li (click)='this.openDropdown("open3")'>在哪裡觀賞?<i class="fa fa-plus" [ngStyle]="{'transform':this.dropdownStatus==='open3'? 'rotate(45deg)': 'rotate(0deg)'}"></i></li>
+            <p *ngSwitchCase="'open3'">在不限數量的裝置上隨時隨地觀賞。登入您的 Netflix 帳戶，就能使用您的個人電腦，或是提供 Netflix App 的任何可上網行動裝置，在 netflix.com 網站上即時觀賞，包括智慧型電視、智慧型手機、平板電腦、串流媒體播放器和遊戲機。
+                <br>
+                <br>
+                您也能使用 iOS、Android 或 Windows 10 App 下載最喜歡的節目。使用下載功能，就能在外出且沒有網路連線時觀賞。Netflix 時時帶著走。</p>
+            <li (click)='this.openDropdown("open4")'>如何取消?<i class="fa fa-plus" [ngStyle]="{'transform':this.dropdownStatus==='open4'? 'rotate(45deg)': 'rotate(0deg)'}"></i></li>
+            <p *ngSwitchCase="'open4'">Netflix 彈性十足。沒有難懂的合約，也不須綁約。點個兩下，就能線上輕鬆取消您的帳戶。無取消費用，可隨時開始或停用您的帳戶。</p>
+            <li (click)='this.openDropdown("open5")'>可以在Nexflix觀賞什麼內容?<i class="fa fa-plus" [ngStyle]="{'transform':this.dropdownStatus==='open5'? 'rotate(45deg)': 'rotate(0deg)'}"></i></li>
+            <p *ngSwitchCase="'open5'">Netflix 擁有豐富的影片內容庫，包括長片、紀錄片、節目、動畫、獲獎肯定的 Netflix 原創作品與更多內容。隨時隨地，盡情觀賞。</p>
+        </ul>
+        <p>準備開心觀賞了嗎？請輸入您的電郵，以建立或存取您的帳戶。</p>
+        <div>
+            <input type="text" placeholder="電郵地址">
+            <button>開始使用 ></button>
+        </div>
+        
+    </div>
+</div>
