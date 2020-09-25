@@ -21,7 +21,9 @@ export class AccountManageComponent implements OnInit {
   }
 
   public manageAccount(account: IAccount) {
-    this.router.navigate(['account-manage/edit'])
+    this.router.navigate(['account-manage/edit', { id: account.id }]);
   }
- 
+
+
+
 }

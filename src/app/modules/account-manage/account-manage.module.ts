@@ -6,7 +6,7 @@ import { UserManagementComponent } from './pages/user-management/user-management
 import { UserComponent } from './components/user/user.component';
 import { CreateComponent } from './pages/create/create.component';
 import { FormsModule } from '@angular/forms';
-import { DropdownComponent } from '../shared/components/dropdown/dropdown.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -15,11 +15,11 @@ import { DropdownComponent } from '../shared/components/dropdown/dropdown.compon
     UserManagementComponent,
     UserComponent,
     CreateComponent,
-    DropdownComponent,
   ],
   imports: [
     CommonModule,
     FormsModule,
+    SharedModule,
     AccountManageRoutingModule
   ],
   exports: [

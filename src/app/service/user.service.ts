@@ -4,7 +4,8 @@ import { ReplaySubject, Subject } from 'rxjs';
 import { HttpService } from './http.service';
 import { Account, User } from '../utility/models/user.model';
 import { FirebaseService } from './firebase.service';
-import { take } from 'rxjs/operators';
+import { take, tap } from 'rxjs/operators';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +14,8 @@ export class UserService {
 
   constructor(
     private $http: HttpService,
-    private $fb: FirebaseService
+    private $fb: FirebaseService,
+    private router: Router
   ) {
   }
 
@@ -29,6 +31,12 @@ export class UserService {
     )
   }
 
+  public updateUser(uid: string) {
+    this.$fb.document('users', uid).read$().subscribe(
+      user => this.createUser(uid, user.data())
+    )
+  }
+
   public createAccount(name: string) {
     this.user$.pipe(take(1)).subscribe(
       user => {
@@ -41,6 +49,40 @@ export class UserService {
           name: account.name
         }));
         this.$fb.document('accounts', user.uid).update(ACCOUNTS);
+      }
+    )
+  }
+
+  public updateAccount(newAccount: IAccount, redirect: string) {
+    this.user$.pipe(
+      take(1),
+    ).subscribe(
+      user => {
+        const NEW_ACCOUNTS = user.accounts.map(account => {
+          if (account.id === newAccount.id) {
+            return newAccount
+          }
+          return account
+        })
+        this.$fb.document('accounts', user.uid).update({ accounts: NEW_ACCOUNTS }).then(
+          _ => this.router.navigate([redirect])
+        )
+      }
+    )
+  }
+
+  public deleteAccount(id: number, redirect: string) {
+    this.user$.pipe(
+      take(1),
+    ).subscribe(
+      user => {
+        const NEW_ACCOUNTS = user.accounts.filter(account => account.id !== id);
+        this.$fb.document('accounts', user.uid).update({ accounts: NEW_ACCOUNTS }).then(
+          _ => {
+            this.updateUser(user.uid);
+            this.router.navigate([redirect])
+          }
+        )
       }
     )
   }

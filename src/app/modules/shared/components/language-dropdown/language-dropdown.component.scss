@@ -1,0 +1,47 @@
+.Language {
+    width: max-content;
+    border: 1px solid white;
+    &__Container {
+        width: auto;
+        position: relative;
+        & > button {
+            width: auto;
+            height: 28px;
+            background-color: black;
+            outline: none;
+            color: white;
+            border: none;
+            font-size: 15px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            & > i {
+                padding-bottom: 5px;
+            }
+        }
+        & > div {
+            position: absolute;
+            width: 100%;
+            top: 29px;
+            left: -1px;
+            max-height: max-content;
+            border: 1px solid gray;
+            background-color: rgba($color: black, $alpha: 0.8);
+            ul {
+                list-style: none;
+                font-size: 15px;
+                padding: 5px;
+                margin: 0px;
+                li {
+                    margin: 5px 0px;
+                    padding: 3px 0px;
+                    &:hover{
+                        background-color: grey;
+                        cursor: pointer;  
+                    }
+                }
+            }
+        }
+    }
+}

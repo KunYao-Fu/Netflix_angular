@@ -1,4 +1,4 @@
-<div class="UserManagement">
+<div class="UserManagement" *ngIf='this.account'>
     <div class="UserManagement__Container">
         <p>編輯使用者</p>
         <div>
@@ -9,13 +9,10 @@
                 <div>
                     <!-- <input type="text" placeholder="名字" (ngModelChange)='this.$user.modifyUser("name", $event)'
                         [(ngModel)]='this.name'> -->
-                    <input type="text" placeholder="名字" >
+                    <input type="text" placeholder="名字" [(ngModel)]='this.account.name'>
                     <p>語言</p>
-                    <div>
-                        <!-- <app-dropdown [options]="this.Mock" [default]="this.$user.getUserById(this.$user.currentId).lan"
-                            (emitter)="this.lanModify($event)"></app-dropdown> -->
-                        <app-dropdown [options]="this.Mock"></app-dropdown>
-                    </div>
+                    <app-language-dropdown [default]="this.account.lan" (onSelect)="this.account.lan = $event">
+                    </app-language-dropdown>
                 </div>
                 <div>
                     <p>年齡分級設定：</p>
@@ -37,10 +34,9 @@
             </div>
         </div>
         <div>
-            <button (click)="this.router.navigate(['account-manage'])">儲存</button>
+            <button (click)="this.submit()">儲存</button>
             <button [routerLink]='["../"]'>取消</button>
-            <!-- <button (click)="this.onDelete()">刪除使用者</button> -->
-            <button >刪除使用者</button>
+            <button (click)="this.delete()">刪除使用者</button>
         </div>
     </div>
 </div>

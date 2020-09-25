@@ -18,7 +18,6 @@ export class UserComponent implements OnInit {
   }
 
   public reply(){
-    this.emit.emit(this.user.id);
-    console.log(this.user.name)
+    this.emit.emit(this.user);
   }
 }

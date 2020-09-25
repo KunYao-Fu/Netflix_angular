@@ -9,6 +9,7 @@ const routes: Routes = [
   { path: '', component: AccountManageComponent },
   { path: 'create', component: CreateComponent },
   { path: 'edit', component: UserManagementComponent },
+  { path: 'edit/:id', component: UserManagementComponent },
   // { path: 'edit/:currentUser', component: UserManagementComponent }
 ];
 

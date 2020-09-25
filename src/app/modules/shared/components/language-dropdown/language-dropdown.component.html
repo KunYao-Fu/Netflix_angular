@@ -1,0 +1,12 @@
+<div #tdropdown class="Language">
+    <div class="Language__Container">
+        <button (click)="this.expand(tdropdown)">
+            {{this.current}}<i class="fa fa-sort-down ml-1"></i>
+        </button>
+        <div *ngIf="this.isOpen">
+            <ul>
+                <li *ngFor="let lan of this.list;let i = index" (click)="this.select(lan.code)">{{lan.text}}</li>
+            </ul>
+        </div>
+    </div>
+</div>
