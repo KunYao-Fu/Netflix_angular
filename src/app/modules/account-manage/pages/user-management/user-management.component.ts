@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { UserService } from 'src/app/service/user.service';
 import { Location } from '@angular/common';
+import { UserComponent } from '../../components/user/user.component';
 
 @Component({
   selector: 'app-user-management',
@@ -15,10 +16,7 @@ export class UserManagementComponent implements OnInit {
     private location: Location,
     public $user: UserService,
   ) { }
-
-  public name = this.$user.getUserById(this.$user.currentId).name;
-  public test1 = <HTMLInputElement>document.getElementById('autoNext');
-
+  
   ngOnInit(): void {
     
   }
@@ -29,18 +27,4 @@ export class UserManagementComponent implements OnInit {
     sessionStorage.removeItem('edit-user');
   }
 
-  public onDelete() {
-    this.$user.deleteUser();
-    this.location.back();
-  }
-
-  public lanModify(custom) {
-    console.log(custom);
-    this.$user.getUserById(this.$user.currentId).lan = custom;
-  }
-
-  public test() {
-    this.test1.checked = true
-    console.log(this.test1);
-  }
 }

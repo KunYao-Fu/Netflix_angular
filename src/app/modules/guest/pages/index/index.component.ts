@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FirebaseService } from 'src/app/service/firebase.service';
+import { AuthService } from 'src/app/auth/auth.service';
 
 @Component({
   selector: 'app-index',
@@ -11,7 +12,8 @@ export class IndexComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private $fb: FirebaseService
+    private $fb: FirebaseService,
+    private $auth: AuthService
   ) { }
 
   ngOnInit(): void {
@@ -20,7 +22,6 @@ export class IndexComponent implements OnInit {
   public dropdownStatus:string = "close"
 
   public login() {
-    this.$fb.collection('users').delete('12');
     this.router.navigate(['guest/login']);
   }
 

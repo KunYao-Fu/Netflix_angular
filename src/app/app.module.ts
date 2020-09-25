@@ -8,7 +8,6 @@ import { ErrorComponent } from './pages/error/error.component';
 import { LayoutComponent } from './layout/layout/layout.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { MainComponent } from './pages/main/main.component';
-import { TestComponent } from './pages/test/test.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
 import { FirebaseModule } from './modules/firebase/firebase.module';
@@ -21,7 +20,6 @@ import { FirebaseModule } from './modules/firebase/firebase.module';
     LayoutComponent,
     FooterComponent,
     MainComponent,
-    TestComponent,
   ],
   imports: [
     HttpClientModule,

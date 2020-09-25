@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { IUser } from 'src/app/utility/interface';
+import { IUser, IAccount } from 'src/app/utility/interface';
 
 @Component({
   selector: 'app-user',
@@ -10,7 +10,7 @@ export class UserComponent implements OnInit {
 
   constructor() { }
 
-  @Input() user:IUser;
+  @Input() user:IAccount;
   @Input() isEdit=false;
   @Output() emit:EventEmitter<any>=new EventEmitter();
 
@@ -19,5 +19,6 @@ export class UserComponent implements OnInit {
 
   public reply(){
     this.emit.emit(this.user.id);
+    console.log(this.user.name)
   }
 }

@@ -20,14 +20,15 @@
                 </div>
                 <div>
                     <i class="fa fa-google"></i>
-                    <p>以 Google 登入</p>
+                    <p (click)="this.$auth.loginByGoogle()">以 Google 登入</p>
                 </div>
                 <div>
-                    <p>尚未加入 Netflix?<a (click)="this.submit()">馬上註冊</a>。</p> 
+                    <!-- <p>尚未加入 Netflix?<a (click)="this.submit()">馬上註冊</a>。</p>  -->
+                    <p>尚未加入 Netflix?<a>馬上註冊</a>。</p>
                 </div>
-                <p>此頁面受到 Google reCAPTCHA 保護，以確認您不是機器人。 <a *ngIf="this.test == false" (click)="this.test = true">進一步了解。</a></p>
+                <p>此頁面受到 Google reCAPTCHA 保護，以確認您不是機器人。 <a *ngIf="this.onClick == false" (click)="this.onClick = true">進一步了解。</a></p>
                 <br>
-                <p *ngIf="this.test == true">由 Google reCAPTCHA 收集的資訊受《<a>隱私權聲明</a>》與《<a>服務條款</a>》約束，用來提供、維持並提升 reCAPTCHA 服務，並且維繫一般安全（Google 不會用於個人化廣告）。</p>
+                <p *ngIf="this.onClick == true">由 Google reCAPTCHA 收集的資訊受《<a>隱私權聲明</a>》與《<a>服務條款</a>》約束，用來提供、維持並提升 reCAPTCHA 服務，並且維繫一般安全（Google 不會用於個人化廣告）。</p>
             </div>
         </div>
         <span></span>

@@ -7,11 +7,14 @@
             </span>
             <div>
                 <div>
-                    <input type="text" placeholder="名字" (ngModelChange)='this.$user.modifyUser("name", $event)'
-                        [(ngModel)]='this.name'>
+                    <!-- <input type="text" placeholder="名字" (ngModelChange)='this.$user.modifyUser("name", $event)'
+                        [(ngModel)]='this.name'> -->
+                    <input type="text" placeholder="名字" >
                     <p>語言</p>
                     <div>
-                        <app-dropdown [options]="this.Mock" [default]="this.$user.getUserById(this.$user.currentId).lan" (emitter)="this.lanModify($event)"></app-dropdown>
+                        <!-- <app-dropdown [options]="this.Mock" [default]="this.$user.getUserById(this.$user.currentId).lan"
+                            (emitter)="this.lanModify($event)"></app-dropdown> -->
+                        <app-dropdown [options]="this.Mock"></app-dropdown>
                     </div>
                 </div>
                 <div>
@@ -23,11 +26,11 @@
                 <div>
                     <p>自動播放控制項</p>
                     <span>
-                        <input type="checkbox" id="autoNext" checked= true >
+                        <input type="checkbox" id="autoNext" checked=true>
                         <label for="autoNext">在所有裝置自動播放影集的下一集。</label>
                     </span>
                     <span>
-                        <input type="checkbox" id="autoTrailer" >
+                        <input type="checkbox" id="autoTrailer">
                         <label for="autoTrailer">在使用所有裝置瀏覽時自動播放預告。</label>
                     </span>
                 </div>
@@ -36,7 +39,8 @@
         <div>
             <button (click)="this.router.navigate(['account-manage'])">儲存</button>
             <button [routerLink]='["../"]'>取消</button>
-            <button (click)="this.onDelete()">刪除使用者</button>
+            <!-- <button (click)="this.onDelete()">刪除使用者</button> -->
+            <button >刪除使用者</button>
         </div>
     </div>
 </div>

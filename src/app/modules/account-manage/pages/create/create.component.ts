@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserService } from 'src/app/service/user.service';
+import { IUser } from 'src/app/utility/interface';
 
 @Component({
   selector: 'app-create',
@@ -20,12 +21,11 @@ export class CreateComponent implements OnInit {
   public UserName
 
   public submit() {
-    this.$user.users.push({ name: this.UserName, lan: '中文', id: this.$user.userId });
+    this.$user.createAccount(this.UserName);
     this.router.navigate(['account-manage']);
   }
 
   public cancel() {
-    this.$user.userId = this.$user.userId - 1;
     this.router.navigate(['account-manage'])
   }
 }

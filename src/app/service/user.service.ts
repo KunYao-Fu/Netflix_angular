@@ -1,8 +1,10 @@
-import * as mock from '../utility/mock';
 import { Injectable } from '@angular/core';
-import { IUser } from '../utility/interface';
-import { Subject } from 'rxjs';
+import { IUser, IAccount } from '../utility/interface';
+import { ReplaySubject, Subject } from 'rxjs';
 import { HttpService } from './http.service';
+import { Account, User } from '../utility/models/user.model';
+import { FirebaseService } from './firebase.service';
+import { take } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -11,40 +13,35 @@ export class UserService {
 
   constructor(
     private $http: HttpService,
+    private $fb: FirebaseService
   ) {
-    // this.users = mock.MOCK_USER;
-    // this.userId = this.users.length;
-    this.$http.get('users').subscribe(
-      (users:any[]) => {
-        console.log(users)
-        this.users = users.map(user => ({ name: user.name, lan: "English", id: user.id })).slice(0,4);
+  }
+
+  private user: ReplaySubject<User> = new ReplaySubject(1);
+  public user$ = this.user.asObservable();
+
+  public createUser(uid: string, data: any) {
+    this.$fb.document('accounts', uid).read$().subscribe(
+      accounts => {
+        const USER = new User(data, uid, accounts.data().accounts);
+        this.user.next(USER);
       }
     )
   }
 
-
-  public users: IUser[];
-  public userId: number;
-  public currentId: number = parseInt(sessionStorage.getItem("edit-user"));
-
-
-  public getUserById(id) {
-    return this.users.filter(user => user.id === id)[0]
-  }
-
-  public editUser(id: number) {
-    sessionStorage.setItem('edit-user', JSON.stringify(id));
-    this.currentId = id;
-  }
-
-  public deleteUser() {
-    const index = this.users.findIndex((user: IUser) => user.id === this.currentId);
-    this.users.splice(index, 1)
-  }
-
-  public modifyUser(prop: 'name' | 'lan', value) {
-    const index = this.users.findIndex((user: IUser) => user.id === this.currentId);
-    console.log(this.users);
-    this.users[index][prop] = value;
+  public createAccount(name: string) {
+    this.user$.pipe(take(1)).subscribe(
+      user => {
+        const ACCOUNT = new Account(user.accounts.length + 1, name);
+        const ACCOUNTS = { ...{}, ...{ accounts: user.accounts } };
+        ACCOUNTS.accounts.push(ACCOUNT);
+        ACCOUNTS.accounts = ACCOUNTS.accounts.map(account => ({
+          id: account.id,
+          lan: account.lan,
+          name: account.name
+        }));
+        this.$fb.document('accounts', user.uid).update(ACCOUNTS);
+      }
+    )
   }
 } 

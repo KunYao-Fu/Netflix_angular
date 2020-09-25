@@ -54,7 +54,7 @@ export class FirebaseService {
     const doc = this.$firebaseStore.collection(name).doc(id);
     return {
       create: (data: any) => doc.set(data),
-      read: () => doc.get(),
+      read$: () => doc.get(),
       update: (data: any) => doc.set(data, { merge: true }),
     };
   }
